@@ -1,6 +1,6 @@
 M-CRAFT Language — MARS LE Custom Assembly Extension
 
-CS210 Final Project
+CS240 Final Project
 
 Author: Sam Rhodes
 
