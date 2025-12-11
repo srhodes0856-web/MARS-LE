@@ -6,15 +6,6 @@ import mars.*;
 import mars.util.*;
 import mars.mips.instructions.*;
 
-/**
- * M-CRAFT custom language implementation.
- *
- * Implements:
- *  - 14 basic MIPS-style instructions (ADD, SUB, AND, OR, XOR, SLT,
- *    ADDI, ANDI, ORI, LW, SW, BEQ, BNE, J)
- *  - Unique Minecraft-themed instructions (MINE, PLACE, CRAFT, BREW,
- *    SMELT, HOTBAR, INVLD, INVST, CHAT, SPRINT, IFMOB)
- */
 public class MCraftLanguage extends CustomAssembly {
 
     // WORLD + INVENTORY memory regions placed inside valid MARS data space
@@ -33,11 +24,6 @@ public class MCraftLanguage extends CustomAssembly {
 
     @Override
     protected void populate() {
-
-        /* ============================================================
-         *  BASIC MIPS-STYLE INSTRUCTIONS (14)
-         * ============================================================
-         */
 
         instructionList.add(new BasicInstruction(
             "ADD $t1,$t2,$t3",
@@ -249,11 +235,6 @@ public class MCraftLanguage extends CustomAssembly {
             }
         ));
 
-        /* ============================================================
-         *  UNIQUE M-CRAFT INSTRUCTIONS
-         * ============================================================
-         */
-
         // MINE
         instructionList.add(new BasicInstruction(
             "MINE $t1,0($t2)",
@@ -412,8 +393,6 @@ public class MCraftLanguage extends CustomAssembly {
                 public void simulate(ProgramStatement s) throws ProcessingException {
                     int rs = s.getOperands()[0];
                     int val = RegisterFile.getValue(rs);
-
-                    // Direct printing to MARS Run I/O
                     SystemIO.printString(Integer.toString(val));
                     SystemIO.printString("\n");
                 }
