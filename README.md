@@ -1,6 +1,9 @@
 M-CRAFT Language — MARS LE Custom Assembly Extension
+
 CS210 Final Project
+
 Author: Sam Rhodes
+
 Overview
 
 M-CRAFT is a custom 32-bit assembly language inspired by MIPS but themed around
@@ -49,7 +52,8 @@ WORLD and INVENTORY memory are mapped to safe MARS regions:
 WORLD_BASE = 0x10010000
 INVENTORY_BASE = 0x10020000
 
-How to Build and Run in MARS LE
+How to Build and Run in MARS LE:
+
 Build the Custom Language
 
 From the root MARS-LE directory, run:
