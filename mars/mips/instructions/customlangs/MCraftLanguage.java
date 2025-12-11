@@ -6,18 +6,6 @@ import mars.*;
 import mars.util.*;
 import mars.mips.instructions.*;
 
-/**
- * M-CRAFT custom assembly language for MARS-LE.
- *
- * Build commands (run from the MARS folder):
- *
- *   javac -d out mars/mips/instructions/customlangs/MCraftLanguage.java
- *   jar cf MCraftLanguage.jar -C out .
- *   rm -rf out
- *
- * Then place MCraftLanguage.jar into the customlangs folder.
- * It will appear inside the Language Switcher tool.
- */
 public class MCraftLanguage extends CustomAssembly {
 
     private static final int WORLD_BASE = 0x20000000;
@@ -34,11 +22,6 @@ public class MCraftLanguage extends CustomAssembly {
 
     @Override
     protected void populate() {
-
-        /* ============================================================
-         *  BASIC INSTRUCTIONS
-         * ============================================================
-         */
 
         // mcadd
         instructionList.add(
@@ -219,12 +202,6 @@ public class MCraftLanguage extends CustomAssembly {
                     }
                 }
         ));
-
-
-        /* ============================================================
-         *  MINECRAFT-THEMED INSTRUCTIONS
-         * ============================================================
-         */
 
         // MINE
         instructionList.add(
