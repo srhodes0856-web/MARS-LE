@@ -60,3 +60,10 @@ From the root MARS-LE directory, run:
 
 java -jar BuildCustomLang.jar MCraftLanguage.jar
 
+Place the resulting JAR into:
+
+mars/mips/instructions/customlangs/
+
+Instructions for activating the language inside MARS LE:
+
+Tools -> Language Switcher -> M-CRAFT Language -> Apply -> Open file -> Assemble
