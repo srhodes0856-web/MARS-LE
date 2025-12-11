@@ -35,17 +35,6 @@ public class MCraftLanguage extends CustomAssembly {
     @Override
     protected void populate() {
 
-        /* ============================================================
-         *  BASIC MIPS-STYLE INSTRUCTIONS (14)
-         * ============================================================
-         *
-         * ADD, SUB, AND, OR, XOR, SLT
-         * ADDI, ANDI, ORI
-         * LW, SW
-         * BEQ, BNE
-         * J
-         */
-
         // ADD rd, rs, rt   (opcode=0x00, funct=0x20)
         instructionList.add(
             new BasicInstruction(
