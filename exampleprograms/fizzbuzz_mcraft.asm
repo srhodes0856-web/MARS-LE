@@ -1,6 +1,4 @@
 # fizzbuzz_mcraft.asm
-# M-CRAFT FizzBuzz from your spec, using only your instructions.
-
         .text
         .globl main
 
